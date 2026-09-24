@@ -4,6 +4,6 @@
   "scripts": {
     "lint": "echo '--> Verification du code (ESLint)... OK'",
     "test": "echo '--> Execution des tests unitaires... OK'",
-    "build": "echo '--> Compilation de l'application... OK'"
+    "build": "echo '--> Compilation de application... OK'"
   }
 }
