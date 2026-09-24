@@ -1,5 +1,5 @@
 name: "Setup Node.js Project"
-description: "Installe Node.js et gère le cache npm"
+description: "Installe Node.js"
 
 inputs:
   node-version:
@@ -14,4 +14,3 @@ runs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node-version }}
-        cache: "npm"
