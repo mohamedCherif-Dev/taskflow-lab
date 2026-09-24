@@ -1,0 +1,17 @@
+name: "Setup Node.js Project"
+description: "Installe Node.js et gère le cache npm"
+
+inputs:
+  node-version:
+    description: "Version de Node.js à utiliser"
+    required: false
+    default: "20"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Configuration de Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: "npm"

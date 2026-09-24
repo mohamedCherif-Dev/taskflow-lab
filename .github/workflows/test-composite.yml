@@ -1,0 +1,20 @@
+name: Test Composite Action
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: [self-hosted, lab]
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Configuration Node via action composite
+        uses: ./.github/actions/setup-node-project
+        with:
+          node-version: "20"
+
+      - name: Vérification
+        run: |
+          node -v
+          npm -v
