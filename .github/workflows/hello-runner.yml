@@ -1,0 +1,17 @@
+name: Hello runner
+on:
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: [self-hosted, lab]
+    steps:
+      - name: Qui suis-je ?
+        run: |
+          echo "Runner : $RUNNER_NAME sur $(hostname)"
+          echo "Utilisateur : $(whoami)"
+          uname -a
+      - name: Outils disponibles
+        run: |
+          docker --version
+          node --version || echo "Node absent"
