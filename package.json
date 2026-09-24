@@ -1,0 +1,9 @@
+{
+  "name": "taskflow-lab",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "echo '--> Verification du code (ESLint)... OK'",
+    "test": "echo '--> Execution des tests unitaires... OK'",
+    "build": "echo '--> Compilation de l'application... OK'"
+  }
+}

@@ -21,14 +21,11 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Installation des dépendances
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            echo "Aucun package-lock.json présent, saut de l'installation npm."
-          fi
+      - name: 1. Linting
+        run: npm run lint
 
-      - name: Exécution des contrôles
-        run: |
-          echo "Contrôle qualité terminé avec succès !"
+      - name: 2. Tests unitaires
+        run: npm run test
+
+      - name: 3. Build de l'application
+        run: npm run build
